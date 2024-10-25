@@ -31,8 +31,7 @@ For a detailed list of test cases, please refer to the [test-cases](./test-cases
 1. Clone the repository
 2. Install dependencies:
 
-   ```npm install
-   ```
+   ```npm install```
 
 3. Set up environment variables:
    Modify the `.env` file in the root directory and add the API token
@@ -43,21 +42,16 @@ You can run tests using the following npm scripts:
 
 - Run all tests:
 
-  ```npm test
-  ```
+  ```npm test```
 
 - Run API tests only:
 
-  ```npm run test:api
-  ```
+  ```npm run test:api```
 
 - Run UI tests only:
 
-  ```npm run test:ui
-  ```
+  ```npm run test:ui```
 
 - Run E2E tests only:
 
-  ```npm run test:e2e
-  ```
-  
+  ```npm run test:e2e```
