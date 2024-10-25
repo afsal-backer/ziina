@@ -1,0 +1,54 @@
+# Test Cases
+
+## API Tests
+
+### Create Payment Intent API (src/tests/api/createPaymentIntent.spec.ts)
+
+1. Should create a payment intent with correct properties
+   - Verifies the response status is 201
+   - Checks all expected properties and their types
+   - Validates specific values (amount, currency_code, status, redirect_url format)
+
+2. Should fail with amount 199 (edge case)
+   - Verifies the response status is 400
+   - Checks for the correct error code and message
+
+3. Should succeed with max limit 360000
+   - Verifies the response status is 201
+   - Checks that the amount in the response is 360000
+
+4. Should fail with amount 360001 (boundary)
+   - Verifies the response status is 400
+   - Checks for the correct error code and message
+
+### Fetch Payment Intent API (src/tests/api/fetchPaymentIntent.spec.ts)
+
+1. Should fetch a payment intent successfully
+   - Verifies the response status is 200
+   - Checks all expected properties and their types
+   - Validates that the status is one of the valid statuses
+
+2. Should handle non-existent payment intent
+   - Verifies the response status is 400
+   - Checks for the correct error code and message
+
+## UI Tests
+
+### Payment Page UI Test (src/tests/ui/paymentPageUI.spec.ts)
+
+1. User can enter payment details and submit, then verify payment confirmation
+   - Sets up a payment page with a valid payment intent
+   - Fills in payment details
+   - Submits the payment
+   - Verifies the payment confirmation details
+
+## E2E Tests
+
+### Payment Intent E2E Flow (src/tests/e2e/paymentIntentE2E.spec.ts)
+
+1. Create payment intent, complete payment, and verify status
+   - Creates a payment intent via API
+   - Navigates to the payment page
+   - Fills in payment details and submits
+   - Verifies payment confirmation
+   - Fetches the payment intent and verifies its status is completed

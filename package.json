@@ -1,0 +1,17 @@
+{
+  "name": "playwright-api-ui-tests",
+  "version": "1.0.0",
+  "description": "Playwright test automation framework for API and UI testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test src/tests/api",
+    "test:ui": "playwright test src/tests/ui --headed",
+    "test:e2e": "playwright test src/tests/e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.32.1",
+    "@types/node": "^18.15.11",
+    "dotenv": "^16.0.3",
+    "typescript": "^5.0.3"
+  }
+}

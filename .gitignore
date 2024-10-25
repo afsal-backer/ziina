@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Playwright specific
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# IDE specific files
+.vscode/
+
+# OS generated files
+.DS_Store
+
+# Logs
+*.log
