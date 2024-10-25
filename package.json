@@ -6,7 +6,7 @@
     "test": "playwright test",
     "test:api": "playwright test src/tests/api",
     "test:ui": "playwright test src/tests/ui --headed",
-    "test:e2e": "playwright test src/tests/e2e"
+    "test:e2e": "playwright test src/tests/e2e --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.1",
